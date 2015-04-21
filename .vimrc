@@ -28,6 +28,7 @@ set ls=2
 
 " tabstop=4 shiftwidth=4 expandtab
 autocmd Filetype javascript set tabstop=2 shiftwidth=2 expandtab
+autocmd Filetype jade set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype coffee set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype html set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype scss set tabstop=2 shiftwidth=2 expandtab
