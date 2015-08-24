@@ -32,6 +32,7 @@ autocmd Filetype jade set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype coffee set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype html set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype scss set tabstop=2 shiftwidth=2 expandtab
+autocmd Filetype css set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype sass set tabstop=2 shiftwidth=2 expandtab
 
 " pathogen
