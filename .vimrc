@@ -2,9 +2,9 @@ syntax enable
 set number
 filetype on
 filetype plugin on
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 set noerrorbells
@@ -26,7 +26,7 @@ set sol
 set modeline
 set ls=2
 
-" tabstop=4 shiftwidth=4 expandtab
+" tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype javascript set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype jade set tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype coffee set tabstop=2 shiftwidth=2 expandtab
@@ -51,4 +51,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Disable concealing
+let g:vim_json_syntax_conceal = 0
 
