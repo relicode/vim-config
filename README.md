@@ -9,4 +9,4 @@ Just my fairly alive vim config for easily installing to new systems.
 Usage
 -----
 
-Clone the package to $HOME/.vim and copy .vimrc to you $HOME `cp $HOME/.vim/.vimrc $HOME`.
+Clone the package to $HOME/.vim and copy .vimrc and .eslintrc.json to you $HOME `cp $HOME/.vim/.vimrc $HOME/.vim/.eslintrc.json $HOME`.
