@@ -1,7 +1,8 @@
-syntax enable
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
 set number
-filetype on
-filetype plugin on
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -26,23 +27,7 @@ set sol
 set modeline
 set ls=2
 
-" tabstop=2 shiftwidth=2 expandtab
-autocmd Filetype javascript set tabstop=2 shiftwidth=2 expandtab
-autocmd Filetype jade set tabstop=2 shiftwidth=2 expandtab
-autocmd Filetype coffee set tabstop=2 shiftwidth=2 expandtab
-autocmd Filetype html set tabstop=2 shiftwidth=2 expandtab
-autocmd Filetype scss set tabstop=2 shiftwidth=2 expandtab
-autocmd Filetype css set tabstop=2 shiftwidth=2 expandtab
-autocmd Filetype sass set tabstop=2 shiftwidth=2 expandtab
-
-" pathogen
-call pathogen#infect()
-syntax enable
-filetype plugin indent on
-
-let g:syntastic_javascript_checkers = ['eslint']
-execute pathogen#infect()
-
+" Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -51,7 +36,4 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-" Disable concealing
-let g:vim_json_syntax_conceal = 0
-
+let g:syntastic_javascript_checkers = ['eslint']
