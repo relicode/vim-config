@@ -9,7 +9,7 @@ Just my fairly alive vim config for easily installing to new systems.
 Requirements
 ------------
 
-npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-import babel-preset-es2015 eslint-plugin-import babel-preset-es2017 babel-plugin-transform-object-rest-spread
+npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-import
 
 Usage
 -----
