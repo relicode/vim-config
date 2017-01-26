@@ -1,3 +1,4 @@
+# npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-import
 env:
   browser: true
   node: true
