@@ -23,6 +23,9 @@ set cul
 set wrapscan
 set sol
 
+" No highlight after redraw
+:noremap <silent> <c-l> :nohls<cr><c-l>
+
 " display filename
 set modeline
 set ls=2
