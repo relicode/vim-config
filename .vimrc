@@ -22,13 +22,19 @@ set hls
 set cul
 set wrapscan
 set sol
-
-" No highlight after redraw
-:noremap <silent> <c-l> :nohls<cr><c-l>
+" HMR for parcel
+set backupcopy=yes
 
 " display filename
 set modeline
 set ls=2
+
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+" Always display statusline starting with the filename
+set laststatus=2
+set statusline=%F
 
 " Syntastic
 set statusline+=%#warningmsg#
