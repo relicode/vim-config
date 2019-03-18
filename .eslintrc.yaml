@@ -1,21 +1,31 @@
-# npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-import
 env:
   browser: true
-  node: true
   es6: true
-extends:
-  - eslint:recommended
+  node: true
+  jest/globals: true
+extends: 'eslint:recommended'
+parser: babel-eslint
+parserOptions:
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+    jsx: true
+  sourceType: module
 plugins:
   - import
   - react
-parserOptions:
-  ecmaVersion: 6,
-  ecmaFeatures:
-    jsx: true
-  sourceType: module
+  - jest
 rules:
-  indent: [error, 2]
+  indent: [error, 2, SwitchCase: 1]
+  jest/no-disabled-tests: warn
+  jest/no-focused-tests: error
+  jest/no-identical-title: error
+  jest/prefer-to-have-length: warn
+  jest/valid-expect: error
   linebreak-style: [error, unix]
-  quotes: [error, single]
+  quotes: [2, single]
+  react/jsx-uses-react: 2
+  react/jsx-uses-vars: 2
+  react/react-in-jsx-scope: 2
   semi: [error, never]
+  strict: [2, never]
 
