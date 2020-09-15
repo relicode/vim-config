@@ -1,10 +1,6 @@
 scriptencoding utf-8
 
-" To install nvim on ubuntu:
-" sudo apt-get install software-properties-common
-" sudo add-apt-repository ppa:neovim-ppa/unstable
-" sudo apt-get update
-" sudo apt-get install neovim
+" After installing neovim:
 " sudo apt-get install python-dev python-pip python3-dev python3-pip
 " sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
 " sudo update-alternatives --config vi
@@ -15,12 +11,11 @@ scriptencoding utf-8
 "
 " Then when running neovim the first time, run ":PlugInstall"
 
-" Python paths
-" pip2 install --user neovim
+" Python path
 " pip3 install --user neovim
 
-" let g:python_host_prog = '/usr/bin/python'
-let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/bin/python'
 
 call plug#begin('~/.vim/plugged')
 
@@ -52,10 +47,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 
 let g:NERDTreeIgnore = ['\.pyc$', '\.o$', '\.lib$', '\.a$', '\.dll$', '\.so$', '\.so\.', '\.dylib$', '\.exe$', '\.out$', '\.app$', '\.stackdump$']
 
-" Colour scheme
-Plug 'https://github.com/altercation/vim-colors-solarized.git'
-Plug 'https://github.com/frankier/neovim-colors-solarized-truecolor-only.git'
-
 " Add quotes, html tags, etc. around something
 Plug 'https://github.com/tpope/vim-surround.git'
 
@@ -65,8 +56,8 @@ Plug 'https://github.com/tpope/vim-commentary.git'
 " Consistent editing styles (indent, etc)
 Plug 'https://github.com/editorconfig/editorconfig-vim.git'
 
-" Lets you refactor multiple things with ctrl-n
-Plug 'terryma/vim-multiple-cursors'
+" Select words with Ctrl-N (like Ctrl-d in Sublime Text/VS Code)
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " Open a file to a specific line with 'vim file:line'
 Plug 'bogado/file-line'
@@ -88,14 +79,10 @@ map <C-I> :IndentGuidesToggle<cr>
 " Let the '.' command work with other plugins
 Plug 'tpope/vim-repeat'
 
-" Colour scheme
-Plug 'chriskempson/base16-vim'
-
 " Asynchronous support
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 " Fancy status bar
-" I *think* this causes serious slowdown, so I'm disabling for now
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -109,38 +96,13 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
-let g:syntastic_rust_checkers = ['cargo']
 
 " Gist
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
 
-" Narrow Region
-Plug 'chrisbra/NrrwRgn'
-map <leader>r :NarrowRegion<CR>
-
-" Jump to a specific character
-Plug 'easymotion/vim-easymotion'
-
-" Better :terminal commands
-Plug 'mklabs/split-term.vim'
-set splitright
-set splitbelow
-let g:disable_key_mappings = 1
-let g:split_term_vertical = 1
-
-" Fix lag in Ruby
-" Plug 'vim-ruby/vim-ruby'
-" let ruby_no_expensive=1
-" let g:ruby_no_expensive=1
-
 " Syntax highlighting
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'dag/vim-fish'
-Plug 'rust-lang/rust.vim'
-Plug 'cespare/vim-toml'
 Plug 'sheerun/vim-polyglot'
-let g:mustache_abbreviations = 1
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -148,12 +110,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
+" Colour scheme
+" Plug 'https://github.com/altercation/vim-colors-solarized.git'
+" Plug 'https://github.com/frankier/neovim-colors-solarized-truecolor-only.git'
+Plug 'chriskempson/base16-vim'
+
 call plug#end()
 
-" Colours
 set termguicolors
-set background=dark
-colorscheme base16-phd
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-default-dark
 
 " Relative line numbers
 au BufReadPost * set relativenumber
@@ -177,15 +143,8 @@ nnoremap <leader>m       :e ++ff=dos %<CR>
 set wrap
 set linebreak
 
-" Spelling
-set spell
-
 " Map <leader>r to NarrowRegion
 map <leader>r :NarrowRegion<CR>
-
-" Set backspace to not go beyond the new insert, but to go over autoindent and
-" end of lines
-set backspace=eol,indent
 
 " Instead of failing because a file isn't saved, prompt to save the file
 set confirm
@@ -234,8 +193,8 @@ set nostartofline
 " Improved regex
 set magic
 
-" Highlight the 80th column
-set colorcolumn=80
+" Highlight the 120th column
+set colorcolumn=120
 
 " Find merge conflict markers
 map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
