@@ -1,18 +1,17 @@
-vim-config
+neovim-config
 ==========
 
 Description
 -----------
 
-Just my fairly alive vim config for easily installing to new systems.
+Just my fairly alive neovim config for easily installing to new systems.
 
-Requirements
+Features and Requirements
 ------------
 
-npm install -g tslint tslint-eslint-rules eslint babel-eslint eslint-plugin-react eslint-plugin-import
+Can't remember, will be updated
 
 Usage
 -----
 
-Clone the package to $HOME/.vim and copy .vimrc and .eslintrc.yaml to you $HOME `cp $HOME/.vim/.vimrc $HOME/.vim/.eslintrc.yaml $HOME/tslint.yaml $HOME`.
-
+Just copy init.vim to `$HOME/.config`, start neovim and run `:PlugInstall`
