@@ -107,6 +107,12 @@ Plug 'sheerun/vim-polyglot'
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" tsconfig.json is actually jsonc, help TypeScript set the correct filetype
+" need to call this manually tho
+Plug 'neoclide/jsonc.vim', {'branch': 'master'}
+autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
+
+
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
