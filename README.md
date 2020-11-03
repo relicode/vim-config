@@ -26,10 +26,11 @@ My fairly alive neovim config for easily installing to new systems.
   - WebAPI support
 
 #### Requirements
+  - [Vim-plug](https://github.com/junegunn/vim-plug)
   - nodejs 12+
-  - python3
+  - python3 with pynvim
   - Everything else required by the plugins, use :checkhealth
 
 ## Setup
-Copy init.vim to `$HOME/.config/nvim/`, start neovim and run `:PlugInstall`. If updating, run `:PlugClean` first.
+Copy or link init.vim to `$HOME/.config/nvim/`, start neovim and run `:PlugInstall`. If updating, run `:PlugClean` first.
 
