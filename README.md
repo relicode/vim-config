@@ -27,10 +27,13 @@ My fairly alive neovim config for easily installing to new systems.
 
 #### Requirements
   - [Vim-plug](https://github.com/junegunn/vim-plug)
-  - nodejs 12+
-  - python3 with pynvim
-  - Everything else required by the plugins, use :checkhealth
+  - [NodeJs 12+](https://github.com/nvm-sh/nvm#installing-and-updating)
+  - Python3 with pynvim `pip3 install pynvim`
+  - Everything else is optional, use :checkhealth
 
 ## Setup
 Copy or link init.vim to `$HOME/.config/nvim/`, start neovim and run `:PlugInstall`. If updating, run `:PlugClean` first.
 
+#### Typescript support
+
+Run `:CocInstall coc-json coc-tsserver` in nvim.
