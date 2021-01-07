@@ -32,7 +32,11 @@ My fairly alive neovim config for easily installing to new systems.
   - Everything else is optional, use :checkhealth
 
 ## Setup
-Copy or link init.vim to `$HOME/.config/nvim/`, start neovim and run `:PlugInstall`. If updating, run `:PlugClean` first.
+Set $XDG_DATA_HOME env variable for example: `export XGD_DATA_HOME="${HOME}/.local/share"`.
+
+Install requirements (especially vim-plug with `sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'`)
+
+Copy or link init.vim to `$HOME/.config/nvim/` (`mkdir -p ~/.config/nvim ; cd ~/.config/nvim ; ln -s ~/etc/vim-config/init.vim ./`), start neovim and run `:PlugInstall`. If updating, run `:PlugClean` first.
 
 #### Typescript support
 
